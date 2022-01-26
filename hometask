@@ -1,0 +1,80 @@
+package ru.lesson6666.oop;
+
+public class Animal {
+
+
+    void run() {
+        String a = "Prepyatstvie_100_meter";
+        System.out.println(a + " " + "Animal ran 300 meter");
+    }
+    void swim() {
+        String b = "Prepyatstvie_20_meter";
+        System.out.println(b + " " + "Animal ran 300 meter");
+    }
+
+}
+
+
+package ru.lesson6666.oop;
+
+    public class Cat extends Animal {
+        void run() {
+            int distance = 50;
+            if (distance >= 200) {
+                System.out.println("cat runs 200 meter");
+            } else {
+                System.out.println("cat ran your distance");
+            }
+        }
+
+        void swim() {
+            System.out.println("Cat cannon swim");
+        }
+    }
+
+
+package ru.lesson6666.oop;
+
+    public class Dog extends Animal{
+        void run() {
+            int distance = 400;
+            if (distance <= 400) {
+                System.out.println("Dog successfully ran your distance");
+            } else {
+                System.out.println("Dog can not run more than 500 meter");
+            }   }
+            void swim() {
+            int distance = 20;
+            if (distance>=10) {
+                System.out.println("Dog swims not more than 10 meter");
+            }  else {
+                System.out.println("Dog successfully swam your distance");
+            }}}
+
+
+
+
+package ru.lesson6666.oop;
+
+public class DemoApp {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        animal.run();
+        animal.swim();
+        cat.run();
+        cat.swim();
+        dog.run();
+        dog.swim();
+
+        Animal [] animals = {animal,cat,dog};
+        int i = 0;
+        do {
+            i = i +1;
+        } while (i<animals.length);
+        System.out.println("Количесвто животных в массиве равно" + " " + i);
+
+    }
+
+}
